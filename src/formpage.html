@@ -1,0 +1,55 @@
+@@include('partials/head.html', {
+"title": "Ремонт кровли"
+})
+
+<header class="formpage row">
+	<div class="formpage__left">
+		<h1>Контакты и реквизиты <br>ИП Долгунова</h1>
+		<p>Для того чтобы сделать заказ или задать вопрос, позвоните по телефону или отправьте сообщение через контактную
+			форму:</p>
+		<div class="formpage__row row">
+			<a href="tel:+7 (965) 146-30-00 " class="row align-center">
+				<img src="assets/files/phone.svg" alt="">
+				<img src="assets/files/viber.svg" alt="">
+				<span>+7 (965) 146-30-00 </span>
+			</a>
+			<a href="" class="row align-center">
+				<img src="assets/files/skype.svg" alt="">
+				<span>ivan1981956</span>
+			</a>
+			<a href="mailto:" class="row align-center">
+				<img src="assets/files/mail.svg" alt="">
+				<span>ivan1981956</span>
+			</a>
+		</div>
+		<div class="formpage__form">
+			<form action="">
+				<div class="row">
+					<label>
+						<span>Имя</span>
+						<input type="text" placeholder="Иван Иванов">
+					</label>
+					<label>
+						<span>Телефон</span>
+						<input type="text" placeholder="Телефон">
+					</label>
+				</div>
+				<label>
+					<span>E-mail</span>
+					<input type="text" placeholder="E-mail">
+				</label>
+				<label>
+					<span>Сообщение</span>
+					<textarea placeholder="Ваше сообщение..."></textarea>
+				</label>
+				<input type="submit" placeholder="Отправить" class="btn">
+			</form>
+		</div>
+	</div>
+	<div class="formpage__right">
+		<img src="assets/img/formback.png" alt="">
+	</div>
+</header>
+
+@@include('partials/map.html', {})
+@@include('partials/footer.html', {})

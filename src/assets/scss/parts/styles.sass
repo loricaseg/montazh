@@ -1,0 +1,1062 @@
+menu
+	margin: 0
+	padding: 0
+	background: #fff
+	box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.07)
+	position: fixed
+	top: 0
+	left: 0
+	@include trans
+	width: 100%
+	z-index: 50
+	.menu__top
+		padding: 25px 4vw
+		@include trans
+		border-bottom: 1px solid #E4E4E4
+		a
+			color: $text
+			&:hover
+				color: $green
+		li
+			margin-right: 40px
+			&:last-child
+				margin: 0
+	.menu__trigger
+		font-size: 18px
+		color: $green
+		align-items: center
+		cursor: pointer
+		&__div
+			margin-left: 10px
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			align-items: flex-end
+			width: 24px
+			div
+				@include trans
+				background: $green
+				height: 2px
+				margin-bottom: 3px
+				&:nth-child(1)
+					margin-top: 1px
+					width: 24px
+				&:nth-child(2)
+					width: 17px
+				&:nth-child(3)
+					width: 20px
+					margin-bottom: 0
+		&:hover
+			.menu__trigger__div
+				div
+					@include trans
+					&:nth-child(1)
+						width: 20px
+					&:nth-child(2)
+						width: 24px
+					&:nth-child(3)
+						width: 17px
+	.menu__bottom
+		@include trans
+		padding: 5px 4vw
+	.menu__logo
+		img
+			@include trans
+			max-width: 161px
+	.menu__bottom__right
+		a
+			margin-right: 25px
+			color: $title
+			font-size: 18px
+			&:hover
+				color: $green
+			&:last-child
+				margin: 0
+			img
+				margin-right: 10px
+.menu-scroll
+	@include trans
+	.menu__top
+		@include trans
+		padding: 10px 4vw
+	.menu__logo
+		img
+			@include trans
+			width: 100px
+
+.hidden-menu
+	opacity: 0
+	position: fixed
+	z-index: -100
+	right: 0
+	top: 0
+	background: $bg1
+	height: 100%
+	padding: 50px
+	box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15)
+	transform: translateX(100%)
+	overflow: hidden
+	width: 0
+	overflow-y: auto
+	@include trans
+	.menu-close
+		cursor: pointer
+		position: absolute
+		top: 20px
+		right: 20px
+		@include trans
+		&:hover
+			transform: rotate(90deg)
+			@include trans
+	.hidden-menu__wrapper
+		margin-top: 100px
+		ul
+			margin-bottom: 40px
+		li
+			margin-bottom: 10px
+		a
+			color: $title
+			font-size: 18px
+			&:hover
+				color: $green
+		p
+			font-size: 18px
+			font-weight: 500
+			color: $title
+			margin-bottom: 10px
+.hidden-menu--active
+	transform: translateX(0%)
+	@include trans
+	opacity: 1
+	z-index: 100
+	width: auto
+
+.header-main
+	margin-top: 110px
+	background: url('../files/bg1.svg') no-repeat right
+	background-size: contain
+	position: relative
+	padding: 200px 0
+
+	.container
+		overflow: visible
+		position: relative
+	.header__back
+		position: absolute
+		right: 150px
+		top: 50%
+		transform: translateY(-50%)
+		img
+			object-fit: contain
+			width: 600px
+			height: 600px
+	.swiper-container-header
+		overflow: hidden
+		position: relative
+		padding: 100px 0
+	.header__left
+		width: 52%
+	.header__right
+		width: 48%
+	.header__right
+		padding-right: 20px
+		img
+			height: 450px
+			width: 100%
+			object-fit: cover
+			box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.41))
+			border-radius: 8px
+	.header__left
+		padding-left: 20px
+		margin-right: 20px
+		.header__sub
+			color: $red
+			font-weight: 700
+			font-size: 21px
+			margin-bottom: 10px
+		h1
+			color: $title
+			font-weight: 800
+			font-size: 44px
+			line-height: 140%
+			margin-bottom: 25px
+		p
+			font-size: 18px
+			line-height: 128.69%
+			max-width: 550px
+	.btn2
+		margin-top: 40px
+	.header__bottom
+		position: absolute
+		bottom: -50px
+		left: 0
+		z-index: 2
+		padding-left: calc(50vw - 690px)
+	.header__nav
+		width: 160px
+	.header-button-prev
+		transform: rotate(180deg)
+		height: 37px
+		cursor: pointer
+	.header-button-next
+		height: 37px
+		cursor: pointer
+	.header__pagination
+		position: relative
+		font-weight: 600
+		font-size: 18px
+		color: $green
+		margin-left: 20px
+		margin-top: 20px
+	.container
+		position: relative
+
+.swiper-button-disabled
+	opacity: .5
+	cursor: default
+
+.tabs
+	background: linear-gradient(162.93deg, #F3F7FD 11.35%, #FEF2F6 116.08%)
+	padding: 100px 0
+	.tabs__container__item
+		overflow: hidden
+	.swiper-slide
+		img
+			width: 100%
+			height: 270px
+			margin-bottom: 20px
+			object-fit: cover
+			position: relative
+		h4
+			font-size: 24px
+			font-weight: 700
+			margin-bottom: 10px
+			margin-top: 0
+			color: $title
+		p
+			color: $text
+			font-weight: 400
+			font-size: 16px
+			line-height: 128.69%
+		&:hover
+			h4, p
+				color: $green
+			img
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					background: $green
+					opacity: .5
+					width: 100%
+					height: 100%
+	h2
+		font-weight: 800
+		font-size: 38px
+		line-height: 114.69%
+		color: $title
+		text-align: center
+		margin-bottom: 45px
+	.tabs__buttons
+		margin-bottom: 45px
+		justify-content: center
+		&__item
+			font-weight: 400
+			font-size: 18px
+			margin-right: 25px
+			color: $title
+			background: #fff
+			box-shadow: 6px 5px 13px rgba(194, 204, 236, 0.53)
+			padding: 25px
+			width: 240px
+			text-align: center
+			cursor: pointer
+			&:last-child
+				margin: 0
+			&:hover
+				background: $green
+				color: #fff
+		.tabs__buttons__item--active
+			background: $green
+			color: #fff
+			box-shadow: 6px 5px 17px rgba(0, 210, 207, 0.36)
+	.tabs__pagination
+		text-align: center
+		margin-top: 50px
+		.swiper-pagination-bullet
+			width: 60px
+			height: 3px
+			background: $text
+			border-radius: 0
+		.swiper-pagination-bullet-active
+			background: $green
+	.tabs-button-prev
+		position: absolute
+		top: 210px
+		z-index: 10
+		transform: rotate(-180deg)
+		cursor: pointer
+		left: 0px
+	.tabs-button-next
+		position: absolute
+		top: 210px
+		right: 0px
+		z-index: 10
+		cursor: pointer
+	.tabs__container
+		position: relative
+	.tabs__container__item
+		display: none
+		@include trans
+	.tabs__container__item--active
+		display: block
+		@include trans
+
+.preference
+	.preference__title
+		text-align: center
+		background: url('../files/p_back.svg') no-repeat bottom
+		background-size: 400px
+		padding-bottom: 150px
+		padding-top: 50px
+		margin-top: -50px
+		p
+			color: $text
+			max-width: 600px
+			margin: 0 auto
+			margin-bottom: 30px
+		.preference__sub
+			font-weight: 800
+			font-size: 32px
+			color: $green
+	&__grid
+		margin-top: 20px
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 20px
+	&__item
+		background: $bg1
+		border-radius: 8px
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		height: 280px
+		padding: 0 20px
+		p
+			font-size: 20px
+			font-weight: 500
+			color: $title
+			line-height: 128%
+			margin-top: 15px
+
+.photos
+	margin-bottom: 50px
+	&__left
+		width: 40%
+		padding-bottom: 50px
+	.photos__left__grid
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 20px
+		img
+			width: 100%
+			object-fit: cover
+			border-radius: 8px
+	.btn2
+		margin-top: 30px
+	&__right
+		width: 52%
+		img
+			width: 100%
+
+.reviews
+	background: $bg1
+	padding: 70px 0
+	position: relative
+	h2
+		text-align: center
+.swiper-container-reviews
+	overflow: hidden
+	margin-top: 55px
+	padding-top: 25px
+	.swiper-slide
+		opacity: .5
+		padding: 30px 25px 25px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			background: url('../files/citate.svg') no-repeat center
+			background-size: contain
+			top: -15px
+			left: 20px
+			z-index: 2
+			height: 30px
+			width: 30px
+		span
+			margin-top: 25px
+			font-weight: 500
+			color: $title
+			display: block
+		.reviews__text
+			height: 120px
+			overflow-y: auto
+			p
+				margin-bottom: 10px
+	.swiper-slide-active
+		background: #fff
+		opacity: 1
+		box-shadow: 0px 6px 13px rgba(74, 177, 225, 0.18)
+	.reviews__pagination
+		text-align: center
+		margin-top: 50px
+	.swiper-pagination-bullet-active
+		background: $green
+	.reviews__nav
+		width: 600px
+		position: absolute
+		top: 60%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 3
+		justify-content: space-between
+	.reviews-button-prev, .reviews-button-next
+		cursor: pointer
+		width: 40px
+		height: 40px
+		img
+			width: 100%
+			height: 100%
+	.reviews-button-prev
+		transform: rotate(180deg)
+
+.text
+	text-align: center
+	h2
+		margin-bottom: 40px
+	p
+		width: 980px
+		margin: 0 auto 20px
+		line-height: 136%
+
+.form
+	&__left
+		width: 45%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			border-radius: 8px 0 0 8px
+	&__right
+		width: 55%
+		background: $bg1
+		border-radius: 0 8px 8px 0
+		padding: 50px
+		p
+			font-size: 24px
+			line-height: 138%
+			font-weight: 500
+			color: $title
+		a
+			color: $red
+			display: inline-block
+		form
+			margin-top: 50px
+			.row
+				margin-bottom: 25px
+				label
+					&:first-child
+						margin-right: 20px
+		label
+			width: 100%
+			p
+				font-size: 18px
+				margin-bottom: 10px
+			input
+				width: 100%
+				background: #fff
+				border: 1px solid #DFDFDF
+				border-radius: 8px
+				padding: 25px 15px
+				&::placeholder
+					font-size: 18px
+		textarea
+			width: 100%
+			background: #fff
+			border: 1px solid #DFDFDF
+			border-radius: 8px
+			padding: 15px 15px 25px
+			height: 150px
+			color: $text
+			font-size: 18px
+			&::placeholder
+				font-size: 18px
+	.btn2
+		border: none
+		margin-top: 25px
+		cursor: pointer
+
+.projects
+	.container
+		position: relative
+	h2
+		text-align: center
+		margin-bottom: 45px
+	img
+		width: 100%
+		position: relative
+		height: 266px
+		z-index: 1
+		object-fit: cover
+	p
+		margin-top: 10px
+		font-size: 18px
+		font-weight: 500
+		color: $title
+	a
+		&:hover
+			p
+				color: $green
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: $green
+				z-index: 2
+				opacity: .5
+				height: 266px
+	.projects__nav
+		display: flex
+		justify-content: space-between
+		position: absolute
+		left: 50%
+		top: 55%
+		transform: translate(-50%, -50%)
+		z-index: 4
+		width: 98%
+
+		.reviews-button-prev, .reviews-button-next
+			width: 40px
+			cursor: pointer
+			height: 40px
+			img
+				width: 100%
+				height: 100%
+		.reviews-button-prev
+			transform: rotate(-180deg)
+
+footer
+	.footer__logo
+		margin-bottom: 5px
+		width: 160px
+		img
+			width: 100%
+	.footer__top
+		padding-bottom: 40px
+		p
+			font-size: 24px
+			margin-bottom: 20px
+			color: $title
+	.footer__sub
+		font-size: 14px
+		color: $text
+		margin-right: 20px
+		&:last-child
+			margin-right: 0
+	.footer__top__right
+		padding-left: 70px
+	.footer__top__left
+		padding-right: 70px
+		border-right: 1px solid #D8D8D8
+	.footer__top__col
+		margin-right: 100px
+		a
+			color: $text
+			font-size: 14px
+			&:hover
+				color: $green
+		span
+			font-size: 16px
+			color: $title
+			font-weight: 500
+			display: block
+			margin-bottom: 10px
+		&:first-child
+			a
+				font-size: 18px
+				color: $title
+				&:hover
+					color: $green
+		&:last-child
+			margin: 0
+		li
+			margin-bottom: 10px
+	.footer__bottom
+		padding-top: 40px
+		padding-bottom: 25px
+		border-top: 1px solid #D2D2D2
+		.menu__bottom__right
+			a
+				color: $title
+				font-size: 18px
+				margin-right: 25px
+				&:hover
+					color: $green
+			img
+				margin-right: 10px
+		p
+			font-size: 14px
+			line-height: 138%
+			margin-top: 15px
+
+.header-inner
+	position: relative
+	margin-bottom: 100px
+	padding-bottom: 150px
+	// &::after
+	// 	content: ''
+	// 	position: absolute
+	// 	background: rgba(255, 255, 255, .95)
+	// 	width: 100%
+	// 	height: 100%
+	// 	top: 0
+	// 	left: 0
+	.header__left
+		p
+			margin-bottom: 15px
+	.header__back
+		top: 60%
+		right: 320px
+	.header__left
+		p
+			max-width: 600px
+
+.map
+	img
+		width: 100%
+
+.jobs
+	margin-bottom: 150px
+	.jobs__item__left
+		width: 52%
+		max-width: 52%
+		position: relative
+		padding-left: calc(50vw - 690px)
+		margin-right: 50px
+		height: fit-content
+		height: -moz-fit-content
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			width: 100%
+			height: 160px
+			bottom: -70px
+			z-index: 0
+		img
+			width: 100%
+		.job__pattern
+			width: auto
+			object-fit: contain
+			position: absolute
+			position: absolute
+			bottom: -40px
+			left: calc(50vw - 800px)
+			z-index: 1
+		.job__photo
+			height: 500px
+			width: 100%
+			position: relative
+			z-index: 1
+			border-radius: 8px
+			box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.41)
+			width: 95%
+			z-index: 2
+	.jobs__item__right
+		width: 34%
+		margin-right: calc(50vw - 690px)
+		h3
+			font-weight: 800
+			font-size: 36px
+			line-height: 114.69%
+			color: $title
+			margin-bottom: 20px
+		p
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+	.jobs__item
+		margin-bottom: 130px
+		&:nth-child(odd)
+			.jobs__item__left
+				&::after
+					background: $green
+		&:nth-child(even)
+			flex-direction: row-reverse
+			.jobs__item__left
+				width: 52%
+				padding-right: calc(50vw - 690px)
+				padding-left: 0
+				margin-right: 0
+				&::after
+					background: $bg1
+				.job__photo
+					margin-left: 30px
+				.job__pattern
+					width: auto
+					object-fit: contain
+					position: absolute
+					position: absolute
+					bottom: -40px
+					right: calc(50vw - 800px)
+					z-index: 1
+					left: auto
+			.jobs__item__right
+				width: 45%
+				padding-left: calc(50vw - 690px)
+				margin-right: 30px
+		&:last-child
+			margin-bottom: 0
+
+.also
+	h2
+		text-align: center
+	&__grid
+		margin-top: 50px
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 40px 20px
+		img
+			width: 100%
+			object-fit: cover
+		p
+			font-size: 20px
+			font-weight: 700
+			margin-top: 5px
+			color: $title
+			margin-right: 20px
+
+.action
+	background: url('../img/bg4.png') no-repeat center
+	background-size: cover
+	margin-top: -100px
+	text-align: center
+	padding: 50px 0 30px
+	h2
+		color: #fff
+		font-size: 33px
+	.action__sub
+		font-size: 33px
+		color: #fff
+		margin-bottom: 15px
+	.btn2
+		margin: 0 auto
+		background: #fff
+		color: $green
+		margin-top: 50px
+		margin-bottom: 20px
+
+.header-photo
+	.header__right
+		img
+			box-shadow: none
+
+.projects__photo
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 30px 20px
+
+.header-photo2
+	background: none
+	border-bottom: 1px solid #E0E0E0
+	padding: 150px 0 100px
+	.header__back
+		img
+			width: 240px
+	.header__left
+		width: 60%
+	.header__right
+		width: 40%
+		position: relative
+		height: 400px
+		padding: 60px
+		background: linear-gradient(141.68deg, #F3F7FD 12.56%, #FEF2F6 87.92%)
+		border-radius: 8px
+		.swiper-container-photo
+			overflow: hidden
+			height: 100%
+			font-size: 14px
+			font-weight: 700
+			color: $title
+		.swiper-slide
+			border: 1px solid #333333
+			border-radius: 50px
+			padding: 10px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: $title
+			&:hover
+				color: #fff
+				background: $green
+				border: 1px solid $green
+	.photos__nav
+		position: absolute
+		@include vert
+		height: 90px
+		left: -15px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		img
+			width: 37px
+			height: 37px
+			box-shadow: none
+		.photos__nav__prev
+			cursor: pointer
+			@include trans
+			&:hover
+				transform: translateY(-10px)
+				@include trans
+			img
+				transform: rotate(-90deg)
+		.photos__nav__next
+			cursor: pointer
+			@include trans
+			&:hover
+				transform: translateY(10px)
+				@include trans
+			img
+				transform: rotate(90deg)
+	.header__back
+		right: 530px
+		bottom: -270px
+
+.header-photo2
+	.header__back
+		right: 600px
+	.header__right__project
+		width: 50%
+		display: flex
+		height: 100%
+		min-height: 400px
+		display: flex
+		align-items: center
+		.header-photo2__item
+			margin-right: 20px
+			margin-bottom: 40px
+			height: fit-content
+			font-size: 18px
+			color: #9B9B9B
+			span
+				color: $title
+				font-weight: 700
+		.header__right__project__grid
+			display: flex
+			flex-wrap: wrap
+			height: 100%
+			justify-content: space-between
+
+.prices
+	margin-bottom: 100px
+	padding: 150px 0 60px
+	overflow: hidden
+	.swiper-container-header
+		padding: 0
+	.header__left
+		width: 60%
+	.price__header
+		p
+			margin-bottom: 15px
+		a
+			color: $red
+			display: inline-block
+	.header__right
+		padding: 80px 0
+		position: relative
+		width: 70%
+		z-index: 2
+		margin-right: -100px
+		img
+			width: 100%
+
+			box-shadow: none
+			max-width: 700px
+	.swiper-slide
+		position: relative
+		z-index: 2
+	.header__back
+		z-index: 1
+
+.table
+	h2
+		text-align: center
+	.table__wrapper
+		width: 90%
+		margin: 40px auto 0
+	table
+		border-radius: 8px
+		overflow: hidden
+	.table__top
+		background: #F2F2F2
+		td
+			font-weight: 700
+		tr
+			border-radius: 8px 8px 0 0
+	td
+		padding: 25px 20px
+		color: #000
+	.table__tr
+		&:nth-child(even)
+			background: rgba(0, 210, 207, 0.13)
+		&:nth-child(odd)
+			background: #FBFBFB
+
+.formpage
+	margin-top: 160px
+
+	position: relative
+	.formpage__left
+		padding-top: 100px
+		width: 40%
+		padding-bottom: 70px
+		margin-left: calc(50vw - 690px)
+	.formpage__right
+		margin-left: 40px
+		width: 45%
+		position: absolute
+		right: 0
+		bottom: 0
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	h1
+		font-weight: 800
+		font-size: 44px
+		color: $title
+		margin-bottom: 30px
+	p
+		max-width: 700px
+		font-size: 18px
+	.formpage__row
+		margin: 30px 0 50px
+		a
+			color: $title
+			margin-right: 25px
+			&:hover
+				color: $green
+			img
+				margin-right: 7px
+	.formpage__form
+		width: 600px
+		input, textarea
+			width: 100%
+			background: #FFFFFF
+			border: 1px solid #DFDFDF
+			border-radius: 8px
+			padding: 20px 15px
+			font-size: 18px
+			&::placeholder
+				font-size: 16px
+		textarea
+			height: 170px
+		label
+			width: 100%
+			margin-bottom: 25px
+			display: block
+			&:last-of-type
+				margin-top: 25px
+			span
+				display: block
+				font-weight: 700
+				font-size: 18px
+				margin-bottom: 10px
+				color: $title
+		.row
+			label
+				margin-right: 20px
+				width: 50%
+				&:last-child
+					margin: 0
+			input
+				width: 100%
+		.btn
+			background: linear-gradient(160.05deg, #D95843 3.65%, #AE4F3F 86.68%)
+			box-shadow: 0px 4px 25px rgba(210, 87, 67, 0.41)
+			border-radius: 39px
+			color: #fff
+			font-size: 18px
+			padding: 20px 40px
+			width: fit-content
+			width: -moz-fit-content
+			min-width: 240px
+			display: flex
+			justify-content: center
+			&:hover
+				color: #fff
+				box-shadow: 0px 4px 25px rgba(210, 87, 67, 0.81)
+
+.reviewspage
+	background: url('../img/revewbg.png') no-repeat center
+	background-size: cover
+	margin-top: 110px
+	padding: 100px 0 50px
+	margin-bottom: 100px
+	h1
+		color: #fff
+		text-align: center
+		font-weight: 700
+		font-size: 48px
+		margin-bottom: 20px
+	.swiper-container-reviews
+		margin-bottom: 0
+		overflow: visible
+		padding-bottom: 0
+		.reviews__text
+			height: 200px
+	.swiper-slide
+		border-radius: 8px
+		background: #fff
+		&::after
+			background: url("../files/citate2.svg") no-repeat center
+
+.empty-page
+	min-height: 100vh
+	margin-top: 110px
+	.empty__right
+		width: 70%
+		margin-top: 100px
+		img
+			object-fit: contain
+			width: 100%
+	h1
+		font-weight: 800
+		font-size: 208px
+		color: $green
+		margin-bottom: 0px
+	p
+		margin-top: -40px
+		font-weight: 800
+		font-size: 44px
+		line-height: 114.69%
+		color: $title
+		margin-bottom: 30px
+	a
+		font-size: 20px
+		width: -moz-fit-content
+		width: fit-content
+		padding-top: 20px
+		padding-bottom: 23px
+
+.menu-mob
+	display: none
