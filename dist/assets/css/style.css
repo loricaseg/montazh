@@ -678,7 +678,7 @@ menu .menu__bottom__right a img {
   background: url("../files/bg1.svg") no-repeat right;
   background-size: contain;
   position: relative;
-  padding: 200px 0;
+  padding: 170px 0;
 }
 
 .header-main .container {
@@ -770,6 +770,7 @@ menu .menu__bottom__right a img {
 
 .header-main .header__nav {
   width: 160px;
+  margin-left: 25px;
 }
 
 .header-main .header-button-prev {
@@ -2330,6 +2331,7 @@ footer .footer__bottom p {
 
   .header-main .header__right img {
     height: 50vw;
+    max-height: 400px;
   }
 
   .header-main .header__back {
@@ -2714,6 +2716,14 @@ footer .footer__bottom p {
 
   .header-main .header__back {
     right: 4vw;
+  }
+
+  .header-main .header__nav {
+    margin-left: 0;
+  }
+
+  .header-main .header__right img {
+    max-height: 300px;
   }
 
   footer .footer__top__col {
